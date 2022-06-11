@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-center mt-5">Vue Todo Application</h2>
+    <h2 class="text-center text-white mt-5">Vue Todo Application</h2>
     <div class="d-flex">
       <input
         type="text"
@@ -8,10 +8,10 @@
         placeholder="Enter task"
         class="form-control"
       />
-      <button @click="submitTask" class="btn btn-warning">ADD</button>
+      <button @click="submitTask" class="btn btn-primary">ADD</button>
     </div>
 
-    <table class="table table-bordered mt-5 rounded-2">
+    <table class="table table-borderless text-white mt-5 rounded-2">
       <thead>
         <tr>
           <!-- {{msg}} -->
@@ -27,12 +27,12 @@
           <td>{{ task.status }}</td>
           <td class="text-center">
             <div @click="editTask(index)">
-              <p class="fa fa-pen pointer"></p>
+              <p class="fa fa-pen text-primary pointer"></p>
             </div>
           </td>
           <td class="text-center">
             <div @click="deleteTask(index)">
-              <span class="fa fa-trash pointer"></span>
+              <span class="fa fa-trash text-danger pointer"></span>
             </div>
           </td>
         </tr>
@@ -53,11 +53,11 @@ export default {
       isEditable: null,
       tasks: [
         {
-          name: "Steal banans from teh store",
+          name: "Khuraim al sadi R.A was very fashionable",
           status: "to-do",
         },
         {
-          name: "Eat cho in 1 hour",
+          name: "Zhimaad R.A was a greate magician",
           status: "in-progress",
         },
       ],
@@ -91,5 +91,11 @@ export default {
 <style scoped>
 .pointer {
   cursor: pointer;
+}
+.container {
+  width: 60vw;
+}
+.table-bordered {
+  border-radius: 9px;
 }
 </style>
